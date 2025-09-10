@@ -23,6 +23,7 @@ graph TD
     EKS --> Nodes[Managed Node Group]
     EKS --> Argo[Argo CD (GitOps)]
     Argo --> DemoApp[Demo App via Kustomize]
+```  
 📁 Project Structure
 project-spectrum/
 ├── infra/                    # Terraform EKS + VPC configs
