@@ -40,7 +40,8 @@ project-spectrum/
 │   └── terraform.yml
 ├── .gitignore
 └── README.md
-```  
+```
+![Terraform CI](https://github.com/RedLeopard/project-spectrum/actions/workflows/terraform.yml/badge.svg) 
   
 ## 🚀 How to Deploy  
 1. ✅ **Clone the Repo**  
