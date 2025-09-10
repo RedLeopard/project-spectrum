@@ -84,13 +84,13 @@ kubectl -n argocd get pods
 ## 📸 Visual Evidence  
   
 ### ✅ EKS Cluster in Console  
-<img width="1440" alt="EC2 Instances" src="https://github.com/user-attachments/assets/aec624b5-700a-4020-9dc3-68517aba7186" />  
+<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/0454ced5-89e7-440b-9dcd-4f96d26a0259" />  
   
 ### ✅ EC2 Node Instances 
-<img width="1440" alt="EKS Cluster" src="https://github.com/user-attachments/assets/2b3f9ef1-b72b-4c02-af98-d5104b0b7b01" />  
+<img width="1423" height="663" alt="Image" src="https://github.com/user-attachments/assets/fa5ae5e5-39a2-4d20-8fbb-7185b0dd4f70" />  
   
 ### ✅ Security Group Details  
-<img width="1440" alt="Security Group" src="https://github.com/user-attachments/assets/007124f7-ed69-4abc-99aa-6a8a7e5a5e94" />  
+<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/e756a061-346f-4c0f-901a-e80c1cee7cac" />
   
 ## 📦 Coming Soon  
 - 🔄 GitHub Actions-based CI/CD pipeline for GitOps  
