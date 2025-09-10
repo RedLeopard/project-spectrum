@@ -40,8 +40,7 @@ project-spectrum/
 │   └── terraform.yml
 ├── .gitignore
 └── README.md
-```
-![Terraform CI](https://github.com/RedLeopard/project-spectrum/actions/workflows/terraform.yml/badge.svg) 
+```  
   
 ## 🚀 How to Deploy  
 1. ✅ **Clone the Repo**  
@@ -85,10 +84,10 @@ kubectl -n argocd get pods
 ## 📸 Visual Evidence  
   
 ### ✅ EKS Cluster in Console  
-<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/0454ced5-89e7-440b-9dcd-4f96d26a0259" />  
+<img width="1423" height="663" alt="Image" src="https://github.com/user-attachments/assets/fa5ae5e5-39a2-4d20-8fbb-7185b0dd4f70" />   
   
 ### ✅ EC2 Node Instances 
-<img width="1423" height="663" alt="Image" src="https://github.com/user-attachments/assets/fa5ae5e5-39a2-4d20-8fbb-7185b0dd4f70" />  
+<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/0454ced5-89e7-440b-9dcd-4f96d26a0259" /> 
   
 ### ✅ Security Group Details  
 <img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/e756a061-346f-4c0f-901a-e80c1cee7cac" />
