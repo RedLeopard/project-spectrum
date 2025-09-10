@@ -3,18 +3,13 @@ cat > README.md <<'EOF'
 This project provisions a **production-ready Amazon EKS cluster** with **Terraform**, adds **Argo CD GitOps** for app delivery, and enables **IRSA** for least-privileged IAM to workloads.  
 > 🚀 Built as preparation for the **Principal Engineer I – Multi Cloud Infrastructure** role at Spectrum (Charter Communications).
 
----
-
 ## 🌟 Features
-- 🧩 **Infrastructure-as-Code** with Terraform  
-- ☸️ **Amazon EKS** (1.29) with managed node groups across multiple AZs  
-- 🔐 **IRSA** (IAM Roles for Service Accounts) enabled  
-- ⚙️ **Argo CD GitOps** for automated sync & drift detection  
-- 🌐 **API endpoint CIDR controls** (public for dev, restrict later)  
-- 💰 **FinOps-aware** (Spot nodes, easy add for Budgets/Anomaly)  
-- 🧰 Modular layout ready for CI, Ansible, and MLOps add-ons
-
----
+- 🧩 Infrastructure-as-Code with Terraform  
+- ☸️ Amazon EKS (1.29) with managed node groups across multiple AZs  
+- 🔐 IRSA (IAM Roles for Service Accounts) enabled  
+- ⚙️ Argo CD GitOps for automated sync & drift detection  
+- 🌐 API endpoint CIDR controls (public for dev, restrict later)  
+- 💰 FinOps-aware (Spot nodes, easy add for Budgets/Anomaly)
 
 ## 🏗️ Architecture Overview
 ```mermaid
