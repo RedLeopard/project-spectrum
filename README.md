@@ -93,14 +93,16 @@ kubectl -n argocd get pods
 <img width="1440" alt="Security Group" src="https://github.com/user-attachments/assets/007124f7-ed69-4abc-99aa-6a8a7e5a5e94" />  
   
 ## 📦 Coming Soon  
-- 🔄 GitHub Actions-based CI/CD pipeline  
+- 🔄 GitHub Actions-based CI/CD pipeline for GitOps  
 - 📈 Auto-scaling with Karpenter  
 - 📊 Prometheus + Grafana monitoring dashboards  
+- 🧰 Ansible playbooks for hybrid/on-prem integration  
+- 🤖 Simple ML inference service (MLOps demo)  
   
 ## 📜 License  
 MIT License. Feel free to use, improve, or fork this project.  
   
 ## 🔗 Built With Pride  
 Created with ❤️ by **Edward Thornton**  
-_For the Caterpillar IT Architect Interview_  
-[GitHub Profile](https://github.com/RedLeopard) • [Portfolio](https://hireedwardthornton.click)  
+_For the Spectrum Principal Engineer Interview_  
+[GitHub Profile](https://github.com/RedLeopard) • [Portfolio](https://hireedwardthornton.click)
