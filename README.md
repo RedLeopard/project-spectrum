@@ -1,44 +1,56 @@
-# 🚜 Caterpillar EKS Lab – AWS Terraform Portfolio Project  
-This project demonstrates how to provision a production-ready **Amazon EKS (Elastic Kubernetes Service)** cluster using **Terraform**, with **OIDC integration for GitHub Actions**, and AWS IAM roles and networking fully automated.  
-> 🔧 Designed as part of a technical interview for an IT Architect role at Caterpillar.  
+# 🌐 Project Spectrum – Hybrid K8s + GitOps (AWS Terraform Portfolio Project)
+This project provisions a **production-ready Amazon EKS cluster** with **Terraform**, adds **Argo CD GitOps** for app delivery, and enables **IRSA** for least-privileged IAM to workloads.  
+> 🚀 Built as preparation for the **Principal Engineer I – Multi Cloud Infrastructure** role at Spectrum (Charter Communications).
   
 ## 🌟 Features  
-- 🧠 Infrastructure-as-Code using Terraform  
-- ☁️ EKS Cluster with node groups across multiple AZs  
-- 🔐 GitHub Actions + OIDC + IAM Role for secure deployments  
-- 🌐 Public subnets with auto-assigned IPs  
-- 📦 Modular, reusable configuration  
-- ✅ Screenshots included for visual verification  
+- 🧩 Infrastructure-as-Code with Terraform  
+- ☸️ Amazon EKS (1.29) with managed node groups across multiple AZs  
+- 🔐 IRSA (IAM Roles for Service Accounts) enabled  
+- ⚙️ Argo CD GitOps for automated sync & drift detection  
+- 🌐 API endpoint CIDR controls (public for dev, restrict later)  
+- 💰 FinOps-aware (Spot nodes, easy add for Budgets/Anomaly)  
+- 🧰 Modular layout ready for CI, Ansible, and MLOps add-ons   
   
 ## 🏗️ Architecture Overview  
 ```mermaid  
 graph TD  
-    GitHubActions -->|OIDC Token| IAM[OIDC IAM Role]  
-    IAM --> Terraform  
-    Terraform --> EKS[Amazon EKS Cluster]  
-    EKS --> Nodes[EC2 Node Group]  
+    Terraform --> VPC[VPC + Subnets]
+    Terraform --> EKS[Amazon EKS Cluster]
+    EKS --> Nodes[Managed Node Group]
+    EKS --> Argo[Argo CD GitOps]
+    Argo --> Demo[Demo App via Kustomize]
 ```  
   
 ## 📁 Project Structure  
 ```bash  
-caterpillar-eks-lab/  
-├── terraform/  
-│   ├── main.tf                 # Main Terraform config  
-│   ├── github-oidc.tf          # GitHub OIDC provider & IAM role  
-│   └── terraform.tfstate       # Terraform state file  
-├── LICENSE                     # MIT License  
-├── README.md                   # This file  
+project-spectrum/
+├── infra/                    # Terraform EKS + VPC configs
+│   ├── providers.tf
+│   ├── variables.tf
+│   ├── vpc.tf
+│   ├── eks.tf
+│   └── outputs.tf
+├── apps/                     # (GitOps) App manifests
+│   └── app-guestbook.yaml
+├── docs/                     # Architecture + runbooks + ADRs
+│   ├── ARCHITECTURE.md
+│   ├── RUNBOOK.md
+│   └── ADR-0001-why-gitops.md
+├── .github/workflows/        # GitHub Actions CI
+│   └── terraform.yml
+├── .gitignore
+└── README.md
 ```  
   
 ## 🚀 How to Deploy  
 1. ✅ **Clone the Repo**  
 ```bash  
-git clone https://github.com/RedLeopard/caterpillar-eks-lab.git  
-cd caterpillar-eks-lab/terraform  
+git clone https://github.com/RedLeopard/project-spectrum.git
+cd project-spectrum/infra
 ```  
   
 2. 🔑 **Set up AWS credentials**  
-Export your AWS access keys or use a named profile.  
+aws configure
   
 3. ⚙️ **Initialize Terraform**  
 ```bash  
@@ -52,14 +64,22 @@ terraform plan
   
 5. 🚀 **Apply the Infrastructure**  
 ```bash  
-terraform apply  
+terraform apply -auto-approve 
 ```  
   
 6. ⛅ **Access the Cluster**  
 ```bash  
-aws eks update-kubeconfig --name caterpillar-eks-cluster  
-kubectl get nodes  
-```  
+aws eks update-kubeconfig --name project-spectrum --region us-east-2
+kubectl get nodes
+kubectl get ns 
+```
+
+7. 🧭 Install Argo CD
+kubectl create ns argocd
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
+helm install argocd argo/argo-cd -n argocd
+kubectl -n argocd get pods
   
 ## 📸 Visual Evidence  
   
