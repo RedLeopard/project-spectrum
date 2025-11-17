@@ -1,6 +1,6 @@
 # 🌐 Project Spectrum – Hybrid K8s + GitOps (AWS Terraform Portfolio Project)
 This project provisions a **production-ready Amazon EKS cluster** with **Terraform**, adds **Argo CD GitOps** for app delivery, and enables **IRSA** for least-privileged IAM to workloads.  
-> 🚀 Built as preparation for the **Principal Engineer I – Multi Cloud Infrastructure** role at Spectrum (Charter Communications).
+> 🚀 Built By Edward Thornton
   
 ## 🌟 Features  
 - 🧩 Infrastructure-as-Code with Terraform  
@@ -103,6 +103,5 @@ kubectl -n argocd get pods
 MIT License. Feel free to use, improve, or fork this project.  
   
 ## 🔗 Built With Pride  
-Created with ❤️ by **Edward Thornton**  
-_For the Spectrum Principal Engineer Interview_  
+Created with ❤️ by **Edward Thornton**   
 [GitHub Profile](https://github.com/RedLeopard) • [Portfolio](https://hireedwardthornton.click)
